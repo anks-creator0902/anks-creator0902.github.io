@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      position: relative;
+      top: 200px;
+      right: 370px;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+    body {
+        background-color: hsl(185, 75%, 39%);
+        font-size: 18px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+    /* điều chỉnh 2 hình tròn */
+    #top-pattern img {
+        position: relative;
+        bottom: 22.22em; /*400px*/
+        right: 5.56em;   /*100px*/
+        max-width: 50%;
+        float: left;
+        z-index: 0;
+    }
+    #bottom-pattern img {
+        max-width: 50%;
+        float: right;
+        position: relative;
+        left: 5em; /*90px*/
+        z-index: 0;
+    }
+    @media screen and (max-width: 376px) {
+    #top-pattern img {
+        max-width: 90%;
+        position: relative;
+        bottom: 9em;
+        right: 10em;
+    }
+    #bottom-pattern img {
+        max-width: 90%;
+        position: relative;
+        left: 12em;
+        top: 3em;
+    }
+    .top-table img {
+        top: -16em;
+        right: 0em;
+    }
+  }
+    .main {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    max-width: 21.1em; /*380px*/
+    height: 22.78em; /*410px*/
+    position: relative;
+    margin: 0 auto;
+    top: 8.33em; /*150px*/
+    left: 1.22em; /*22px*/
+    z-index: 1;
+  }
+    .top-table {
+        background-image: url('/file code/Website/challenge/profile-card-component-main/images/bg-pattern-card.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 35%;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    .top-table img {
+        position: relative;
+        border-radius: 50%;
+        border: azure solid 5px;
+        top: 5em; /*90px */
+        right: 5em;
+    }
+    .description {
+        width: 100%;
+        height: 65%;
+        position: absolute;
+        text-align: center;
+    }
+    .info {
+        height: 58%;
+        width: auto;
+        text-align: center;
+        position: relative;
+        top: 20px;
+    }
+    .info #name, .info #age {
+        display: inline-block;
+        position: relative;
+        top: 30px;
+        padding-left: 5px;
+    }
+    .info #age, .info #London {
+        color: hsl(0, 0%, 59%);
+    }
+    .famous {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .flex-element {
+        position: relative;
+        top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="top-pattern">
+    <img src="images/bg-pattern-top.svg">
+  </div>
+  <div class="main">
+    <div class="top-table">
+      <img src="images/image-victor.jpg" alt="image-victor" id="image-victor">
+    </div>
+    <div class="description">
+      <div class="info">
+          <h3 id="name">Victor Crest</h3>
+          <p id="age">26</p>
+          <p id="London">London</p>
+      </div>
+      <hr style="color:hsl(0, 0%, 59%)">
+      <div class="famous">
+        <div class="flex-element">
+            <b>80K</b>
+            <br>
+            <p style="color: hsl(0, 0%, 59%); font-size: small;">Followers</p>
+        </div>
+        <div class="flex-element">
+            <b>803K</b>
+            <br>
+            <p style="color: hsl(0, 0%, 59%); font-size: small;">Likes</p>
+        </div>
+        <div class="flex-element">
+            <b>1.4K</b>
+            <br>
+            <p style="color: hsl(0, 0%, 59%); font-size: small;">Photos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <div id="bottom-pattern">
+    <img src="images/bg-pattern-bottom.svg">
+  </div>
+</body>
+</html>
